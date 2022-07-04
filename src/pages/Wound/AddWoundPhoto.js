@@ -1,21 +1,17 @@
 import React, {useState} from "react";
 import axios from "axios";
-import {useForm} from "react-hook-form";
 import Button from "../../components/Button/Button";
 import "./AddWound.css"
 
 function AddWoundPhoto({woundId, handleClick}) {
 
-    const {register, handleSubmit, reset, formState: {errors}} = useForm();
     const [previewUrl, setPreviewUrl] = useState("");
     const [file, setFile] = useState([]);
     const [disabled, toggleDisabled] = useState(true);
     const [addSucces, toggleAddSucces] = useState(false);
 
 
-    function refreshPage(woundId){
-        window.location.reload(false);
-    }
+
     function handleImageChange(e) {
         e.preventDefault();
         const uploadedFile = e.target.files[0];
