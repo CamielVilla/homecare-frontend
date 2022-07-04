@@ -19,7 +19,6 @@ function WoundsToAsses(){
                         Authorization: `Bearer ${token}`,
                     }
                 })
-                console.log(result.data)
                 setWounds(result.data);
             }catch (e) {
                 console.error(e)
