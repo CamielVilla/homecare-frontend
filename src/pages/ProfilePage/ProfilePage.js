@@ -52,7 +52,7 @@ function ProfilePage(){
                 >
                     <TextInput
                         htmlFor="old-password"
-                        type="text"
+                        type="password"
                         placeholder="Oud wachtwoord"
                         fieldName="oldPassword"
                         register={register}
@@ -63,7 +63,7 @@ function ProfilePage(){
                     />
                     <TextInput
                         htmlFor="new-password"
-                        type="text"
+                        type="password"
                         placeholder="Nieuw wachtwoord"
                         fieldName="newPassword"
                         register={register}
@@ -74,7 +74,7 @@ function ProfilePage(){
                     />
                     <TextInput
                         htmlFor="new-password-confirm"
-                        type="text"
+                        type="password"
                         placeholder="Herhaal nieuw wachtwoord"
                         fieldName="newPasswordConfirm"
                         register={register}

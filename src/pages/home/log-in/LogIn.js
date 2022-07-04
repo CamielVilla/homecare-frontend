@@ -48,7 +48,7 @@ function LogIn () {
                 />
                 <TextInput
                 htmlFor="login-password"
-                type="text"
+                type="password"
                 placeholder="Wachtwoord"
                 fieldName="loginPassword"
                 register={register}

@@ -2,7 +2,7 @@ import React from "react";
 import './Button.css'
 
 
-function Button ({key, buttonType, handleClick, children, onChange, name, disabled}){
+function Button ({key, buttonType, handleClick, children, onChange, name, disabled, id}){
 
     return (
         <button
@@ -13,6 +13,7 @@ function Button ({key, buttonType, handleClick, children, onChange, name, disabl
             name={name}
             key={key}
             disabled={disabled}
+            id={id}
         >
             {children}
         </button>

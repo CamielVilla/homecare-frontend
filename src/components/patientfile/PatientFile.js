@@ -135,7 +135,7 @@ function PatientFile({id}){
                         </Button>
                         </div>
                     })}
-                    {role != "PATIENT" &&
+                    {role !== "PATIENT" &&
                         <button className="add-wound-button" onClick={() => history.push(`/nieuwe-wond/${id}`)}>Voeg wond toe</button>
                     }
                 </div>
@@ -185,7 +185,7 @@ function PatientFile({id}){
                                &&
                                <td>{woundExam.nurseAssessment}</td>
                            }
-                           {!woundExam.nurseAssessment && role != 'PATIENT' ?
+                           {!woundExam.nurseAssessment && role !== 'PATIENT' ?
                                <td>
                                    <form>
                                        <label htmlFor={woundExam.id}>

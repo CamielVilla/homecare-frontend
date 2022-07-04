@@ -31,7 +31,7 @@ function Homepage(){
                 </div>
             </div>
         </header>
-            <img src={nurse} alt="nurse-image" className="nurse-image"/>
+            <img src={nurse} alt="nurse-background"  className="nurse-image"/>
         </>
     )
 }

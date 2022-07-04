@@ -7,13 +7,13 @@ import TextAreaInput from "../../components/Form/TextAreaInput";
 import Button from "../../components/Button/Button";
 import Page from "../../components/Page/Page";
 import axios from "axios";
-import {useParams} from "react-router-dom";
+import {useHistory, useParams} from "react-router-dom";
 
 function AddWound() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [addSucces, toggleAddSucces] = useState(false)
     const { id } = useParams();
-
+    const history = useHistory();
 
     async function addNewWound(e){
         const token = localStorage.getItem('token')
@@ -37,7 +37,7 @@ function AddWound() {
     }
     return (
         <Page>
-
+            <Button handleClick={() => history.goBack()} id="go-back-button">Terug</Button>
         <Form
         title="Voeg nieuwe wond toe"
         handleSubmit={handleSubmit(addNewWound)}

@@ -1,7 +1,8 @@
 import React, {useContext, useEffect, useState} from "react";
 import './Nav.css';
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import {AuthContext} from "../../Context/AuthContext";
+import Button from "../Button/Button";
 
 function Nav () {
 
@@ -11,6 +12,7 @@ function Nav () {
     const admin = ["admin", "zorgverleners", "patiënten"]
     const nurses= ["nieuwe-foto's", "profiel", "patiënten-overzicht"]
     const patients= ["dossier-overzicht", "profiel"]
+
 
     useEffect(() => {
            if(user) {
@@ -31,7 +33,7 @@ function Nav () {
                     return<li key={nav}><NavLink
                         to={nav} exact activeClassName="active-link">{nav}</NavLink></li>
                 })}
-                {user && <button onClick={(e) => {logOut(e); setNavItems(home)}}>Log uit</button> }
+                {user && <Button id="log-out-button" handleClick={(e) => {logOut(e); setNavItems(home)}}>Log uit</Button> }
             </ul>
             </div>
         </nav>

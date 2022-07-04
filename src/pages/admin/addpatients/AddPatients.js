@@ -14,7 +14,6 @@ function AddPatients () {
     const [addSucces, toggleAddSucces] = useState(false)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { user } = useContext(AuthContext);
-    const [patients, setPatients] = useState("")
 
 
 
